@@ -1,4 +1,5 @@
 import { Schema, model } from 'mongoose';
+import 'dotenv/config';
 
 const HouseSchema = new Schema(
     {
@@ -19,7 +20,8 @@ const HouseSchema = new Schema(
     }
 );
 HouseSchema.virtual('thumbnail_url').get(function () {
-    return `http://localhost:3335/files/${this.thumbnail}`;
+    const baseUrl = process.env.BASEURL;
+    return `${baseUrl}${this.thumbnail}`;
 });
 
 export default model('House', HouseSchema);
