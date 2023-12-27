@@ -5,13 +5,13 @@ import cors from 'cors';
 import path from 'path';
 // chamando as rotas
 import routes from './routes';
+import 'dotenv/config';
 
 class App {
     constructor() {
         this.server = express();
-
-        const uri =
-            'mongodb+srv://devhouse:Dh200820@cluster0.6pvfh.mongodb.net/?retryWrites=true&w=majority';
+        const myUri = process.env.MYURI;
+        const uri = myUri;
 
         mongoose
             .connect(uri, {
