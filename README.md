@@ -10,6 +10,7 @@ CRUD completo utilizando MONGO DB para administrar casas. Padrão MVC.
 O projeto destina-se a administração de casas. Conta com um sistema de login com senha criptografada e um CRUD completo para controle de casas, usuários e reservas das casas.
 
 ### 🔧 Pré-requisitos
+
 ```
 yarn add cors
 yarn add dotenv
@@ -18,5 +19,4 @@ yarn add mongodb
 yarn add mongoose
 yarn add multer
 yarn add yup
-
 ```
