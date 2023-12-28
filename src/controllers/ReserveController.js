@@ -1,12 +1,12 @@
-import Reserve from "../models/Reserve";
-import House from "../models/House";
-import User from "../models/User";
+import Reserve from '../models/Reserve';
+import House from '../models/House';
+import User from '../models/User';
 
 class ReserveController {
     async index(req, res) {
         const { user_id } = req.headers;
         const reserves = await Reserve.find({ user: user_id }).populate(
-            "house",
+            'house'
         );
         return res.json(reserves);
     }
@@ -20,20 +20,20 @@ class ReserveController {
             const house_detalhe = await House.findById(house_id);
             // validacao verificando se existe ou nao a casa
             if (!house_detalhe) {
-                return res.status(400).json({ error: "Essa casa não existe." });
+                return res.status(400).json({ error: 'Essa casa não existe.' });
             }
             // validando o status da casa
             if (house_detalhe.status !== true) {
                 return res
                     .status(400)
-                    .json({ error: "Solicitação indisponível." });
+                    .json({ error: 'Solicitação indisponível.' });
             }
             const user_detalhe = await User.findById(user_id);
             // evitando que o dono fda casa reserve a própria casa
             if (String(user_detalhe._id) === String(house_detalhe.user)) {
                 return res
                     .status(401)
-                    .json({ error: "Reserva não permitida." });
+                    .json({ error: 'Reserva não permitida.' });
             }
 
             const reserve = await Reserve.create({
@@ -46,8 +46,8 @@ class ReserveController {
 
             return res.json({ reserve, user_detalhe, house_detalhe });
         } catch (error) {
-            console.error("Erro ao criar reserva:", error);
-            return res.status(500).json({ error: "Erro ao criar reserva" });
+            console.error('Erro ao criar reserva:', error);
+            return res.status(500).json({ error: 'Erro ao criar reserva' });
         }
     }
 
