@@ -42,5 +42,5 @@ Copyright © 2007 Free Software Foundation, Inc. [fsf.org](https://fsf.org/)
 [GNU GENERAL PUBLIC LICENSE](https://www.gnu.org/licenses/gpl-3.0.html)
 
 ### 🙌 Gratidão
-Ideias e possibilidaes doadas através do curso.
+Ideias e possibilidades doadas através do curso.
 Matheus [Sujeito Programador](https://sujeitoprogramador.com/)
