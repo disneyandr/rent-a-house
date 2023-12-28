@@ -1,1 +1,1 @@
-![logo do projeto]([https://drive.google.com/drive/folders/1qEyToga9zqTMIrRc_XE9Noobh65dPJ9X](https://drive.google.com/file/d/1RWjOurU3DFzYbhjJOeyzMSEw6_ORqm7P/view?usp=drive_link)https://drive.google.com/file/d/1RWjOurU3DFzYbhjJOeyzMSEw6_ORqm7P/view?usp=drive_link)
+![logo do projeto](https://climadigital.com.br/all_image/nodejs/BACKGROUND.jpg)
